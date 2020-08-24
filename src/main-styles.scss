@@ -1,0 +1,29 @@
+/* !Ahmedshaban: This is where to make global styles and change bulma variables */
+
+
+//!AhmedShaban: Import Google fonts. Cairo font family
+@import url("https://fonts.googleapis.com/css?family=Cairo:400,700,900");
+
+//!Ahmedshaban: setting the font family variable
+$family-sans-serif: "Cairo", sans-serif;
+
+
+//!AhmedShaban: Update Bulma variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+
+
+/* !AhmmedShaban: Create global styles */
+html, body
+{
+    height: 100%;
+}
+
+html
+{
+    background-image: url('./assets/background.svg');
+    background-size: cover;
+    overflow-y: auto !important;
+}

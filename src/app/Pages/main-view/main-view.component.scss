@@ -1,0 +1,105 @@
+.root
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app_name
+{
+    font-family: 'Cairo', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+.has-gradient
+{
+    background: -webkit-linear-gradient(#13f7f4, #2af598);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.board
+{
+    //Basic scrolling options
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    // Override Automatic Minimum Size
+    min-width: 0;
+    min-height: 0;
+
+    .board-bar
+    {
+        background: rgba(gray, 0.5);
+        padding: 8px 15px;
+
+        .board-name
+        {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    .board-wrapper
+    {
+        display: flex;
+        flex-grow: 1;
+        overflow-x: auto;
+
+        .board-columns
+        {
+            display: flex;
+            flex-grow: 1;
+
+            .board-column
+            {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis:0;
+
+                min-width: 200px;
+
+                margin: 50px;
+                padding: 25px;
+
+                border-radius: 4px;
+
+                background: rgba(white,0.5);
+                
+                //!Ahmedshabaan: To handle margins
+                &:not(:first-child) {
+                    margin-left: 0;
+                }
+
+                .column-title
+                {
+                font-size: .95rm;
+                font-weight: 600;
+                font-family: 'Cairo', sans-serif;
+                margin-bottom: 20px;
+                }
+        }
+        }
+    }
+}
+
+.task-container
+{
+    flex-grow: 1;
+}
+
+.task
+{
+    padding: 15px 12px;
+    display: flex;
+    background: white;
+    border-bottom: solid 1px #ddd;
+    border-radius: 4px;
+    //shadow
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05),
+    0 3px 14px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}

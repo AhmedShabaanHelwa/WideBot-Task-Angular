@@ -1,0 +1,132 @@
+<!--The main dvision of the application-->
+<div class="root">
+
+    <!--Navigation bar division-->
+    <div class="navbar has-background-dark">
+        <!--Navigation bar brand division-->
+        <div class="navbar-brand">
+            <!--Navigation bar single item division-->
+            <div class="navbar-item">
+                <h1 class="app_name has-gradient">WideBot Dashboard</h1>
+            </div>
+            <!--Navigation bar single item division-->
+
+        </div>
+        <!--Navigation bar brand division-->
+
+    </div>
+    <!--End of Navigation bar division-->
+
+    <!----------------------------------------------------------------------------------->
+
+    <!--Board division-->
+    <div class="board">
+        <!--Board Bar division-->
+        <div class="board-bar">
+            <p class="board-name">WideBot playground</p>
+        </div>
+        <!--Board Bar division-->
+        <!---------------------------->
+
+        <!--Board Wrapper division-->
+        <div class="board-wrapper">
+
+            <!--Actual board columns division-->
+            <div class="board-columns " cdkDropListGroup>
+
+                <!--Single board column division-->
+                <div class="board-column">
+
+                    <div class="column-title">
+                        Folder 1
+                    </div>
+
+                    <div class="task-container"
+                    cdkDropList
+                    #doneList="cdkDropList"
+                    [cdkDropListData]="flows1"
+                    (cdkDropListDropped)="drop($event)"
+                    >
+                        <div class="task" *ngFor="let item of flows1" cdkDrag>
+                            {{item}}
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--End ofSingle board column division-->
+
+                <!--Single board column division-->
+                <div class="board-column">
+                    <div class="column-title">
+                        Folder 2
+                    </div>
+
+                    <div class="task-container"
+                    cdkDropList
+                    #doneList="cdkDropList"
+                    [cdkDropListData]="flows2"
+                    (cdkDropListDropped)="drop($event)"
+                    >
+                        <div class="task" *ngFor="let item of flows2" cdkDrag>
+                            {{item}}
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--End ofSingle board column division-->
+
+                <!--Single board column division-->
+                <div class="board-column">
+                    <div class="column-title">
+                        Folder 3
+                    </div>
+
+                    <div class="task-container"
+                    cdkDropList
+                    #doneList="cdkDropList"
+                    [cdkDropListData]="flows3"
+                    (cdkDropListDropped)="drop($event)"
+                    >
+                        <div class="task" *ngFor="let item of flows3" cdkDrag>
+                            {{item}}
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <!--End ofSingle board column division-->
+
+                <!--Single board column division-->
+                <div class="board-column">
+                    <div class="column-title">
+                        Folder 4
+                    </div>
+
+                    <div class="task-container"
+                    cdkDropList
+                    #doneList="cdkDropList"
+                    [cdkDropListData]="flows4"
+                    (cdkDropListDropped)="drop($event)"
+                    >
+                        <div class="task" *ngFor="let item of flows4" cdkDrag>
+                            {{item}}
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <!--End ofSingle board column division-->
+
+            </div>
+            <!--End of board columns division-->
+
+        </div>
+        <!--End of Board Wrapper division-->
+
+    </div>
+    <!--Board division-->
+
+</div>
+<!--End of main division-->
